@@ -1,0 +1,69 @@
+    
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  text-align: center;
+  padding: 20px;
+  height: 30px;
+  background-color: #f8f8f8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1400px; /* para limitar el ancho general */
+  min-height: calc(100vh - 160px); /* ocupa toda la altura menos header/footer */
+  box-sizing: border-box;
+}
+
+.contenedor {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+    .imagen {
+      width: 100%;
+      height: 60%;
+      margin-bottom: 15px;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap; /*por si se reduce tamaño pantalla*/
+      padding-top: 5px;
+    }
+
+    .input-group .info {
+  margin: 0;
+  padding:0;
+  font-size: 14px;
+  line-height: 1;
+}
+
+    input[type="number"] {
+      width: 60px;
+      padding: 4px 6px;
+      font-size: 12px;
+    }
+
+    button {
+      padding: 4px 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
