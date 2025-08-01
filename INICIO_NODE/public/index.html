@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini App con Node.js</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    button { padding: 10px 20px; font-size: 16px; }
+    #resultado { margin-top: 20px; font-size: 24px; color: #333; }
+  </style>
+</head>
+<body>
+
+  <h1>Mini App con Node.js + Express</h1>
+  <button id="obtenerNombre">Obtener nombre aleatorio</button>
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById('obtenerNombre').addEventListener('click', () => {
+      fetch('/api/nombre')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('resultado').textContent = `Nombre: ${data.nombre}`;
+        })
+        .catch(err => {
+          document.getElementById('resultado').textContent = 'Error al obtener nombre';
+          console.error(err);
+        });
+    });
+  </script>
+
+</body>
+</html>

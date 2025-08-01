@@ -1,0 +1,91 @@
+
+
+/* Fondo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #333;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 2rem;
+}
+
+/* Lista de tareas */
+ul#lista {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+ul#lista li {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+ul#lista li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Botones */
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0.2rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Filtro y entrada */
+select, input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem 1rem 0;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* Filtro label */
+label[for="filtro"] {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    ul#lista li {
+        font-size: 0.95rem;
+    }
+
+    button, select, input {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

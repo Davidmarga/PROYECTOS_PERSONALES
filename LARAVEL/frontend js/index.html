@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Tareas</title>
+</head>
+<body>
+    <h1>Aplicación de Tareas</h1>
+
+    <!-- Formulario de Login -->
+    <div id="login-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="email" id="email" placeholder="Email" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <a href="new_user.html">Crear nuevo usuario</a>
+    </div>
+
+    <!-- Sección de tareas (oculta hasta estar logueado) -->
+    <div id="tasks-section" style="display:none;">
+        <button id="logout-btn">Cerrar sesión</button>
+        <h2>Tareas</h2>
+        <ul id="task-list"></ul>
+
+        <h3>Crear nueva tarea</h3>
+        <form id="task-form">
+            <input type="text" id="title" placeholder="Título" required><br>
+            <textarea id="description" placeholder="Descripción"></textarea><br>
+            <input type="number" id="user_id" placeholder="ID de usuario" required><br>
+            <input type="number" id="category_id" placeholder="ID de categoría" required><br>
+            <label><input type="checkbox" id="completed"> Completada</label><br>
+            <button type="submit">Crear Tarea</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

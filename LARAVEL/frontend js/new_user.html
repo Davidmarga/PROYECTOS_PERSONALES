@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Crear nuevo usuario</h1>
+    <form id="createUserForm">
+        <label for="usuario">Nombre</label>
+        <input type="text" id="usuario" placeholder="nombre">
+        <div class="error" id="error-usuario"></div>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" placeholder="Correo electrónico"><br>
+        <div class="error" id="error-email"></div>
+
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" placeholder="contraseña">
+        <div class="error" id="error-contraseña"></div>
+
+        <label for="contraseñaCheck">Repetir contraseña</label>
+        <input type="password" id="contraseñaCheck" placeholder="Repetir contraseña">
+        <div class="error" id="error-contraseñaCheck"></div>
+
+        <button type="submit">Crear usuario</button>
+    </form>
+    <p id="success-msg" style="color: green;"></p>
+</body>
+<script src="create_user.js"></script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="utf-8">
+    <title>Agenda</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+</head>
+<body>
+    <h1>LISTA DE TAREAS</h1>
+    <ul id="lista"></ul>
+    <label for="filtro">Filtrar:</label>
+    <select id="filtro" onchange="mostrarTareas()">
+        <option value="todas">Todas</option>
+        <option value="completadas">Completadas</option>
+        <option value="pendientes">Pendientes</option>
+    </select>
+    <input type="text" id="tarea" placeholder="Nueva tarea">
+    <button onclick="agregarTarea()">Añadir tarea</button>
+    <button onclick="mostrarTareas()">Mostrar tareas</button>
+
+    <script src="agenda.js"></script>
+</body>
+
+</html>
