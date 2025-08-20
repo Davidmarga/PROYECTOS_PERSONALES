@@ -30,44 +30,56 @@ function Register() {
   };
 
   return (
-    <div>
-      <h2>Crear nuevo usuario</h2>
+<div className="container mt-5">
+  <div className="row justify-content-center">
+    <div className="col-md-6">
+      <h2 className="mb-4">Crear nuevo usuario</h2>
       <form onSubmit={handleRegister}>
-        <input
-          type="text"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          placeholder="Nombre"
-          required
-        />
-        <br />
-        <input
-          type="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          placeholder="Email"
-          required
-        />
-        <br />
-        <input
-          type="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          placeholder="Contraseña"
-          required
-        />
-        <br />
-        <input
-          type="password"
-          value={passwordCheck}
-          onChange={e => setPasswordCheck(e.target.value)}
-          placeholder="Repetir contraseña"
-          required
-        />
-        <br />
-        <button type="submit">Crear usuario</button>
+        <div className="mb-3">
+          <input
+            type="text"
+            className="form-control"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            placeholder="Nombre"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            type="email"
+            className="form-control"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            type="password"
+            className="form-control"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            placeholder="Contraseña"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <input
+            type="password"
+            className="form-control"
+            value={passwordCheck}
+            onChange={e => setPasswordCheck(e.target.value)}
+            placeholder="Repetir contraseña"
+            required
+          />
+        </div>
+        <button type="submit" className="btn btn-success w-100">Crear usuario</button>
       </form>
     </div>
+  </div>
+</div>
   );
 }
 

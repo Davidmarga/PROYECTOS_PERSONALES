@@ -1,0 +1,5 @@
+Proyecto realizado con HTML, css, JavaScript y php, en el cual se muestra a el usuario un formulario en el que rellenar los datos para su curriculum. Hay campos como la experiencia, las formaciones o las aptitudes que el usuario puede ir añadiendo en base a las empresas que a trabajado o a los estudios que tiene de forma dinámica, ya que estos serán diferentes para cada usuario
+
+Estos datos se pasan a otra pagina donde se muestran al usuario, y tiene un botón para descargarlos en pdf, si lo pulsa, los datos se pasan a una tercera pagina, la cual gracias a la herramienta Dompdf que se ha descargado a través de composer, coge los campos del formulario y los presenta en pdf y lo descarga en el equipo del cliente
+
+Los datos introducidos en el primer formulario se controlan con JavaScript (dentro del propio documento.php se encuentra el scritp), para que no introduzcan datos erróneos los usuarios, y los estilos están aplicados en un documento externo css

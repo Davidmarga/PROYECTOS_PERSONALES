@@ -32,7 +32,7 @@ const createUserForm = document.getElementById('createUserForm');
         hasError = true;
     }
     if (password.value !== passwordCheck.value) {
-    setError(passwordCheck, 'Las contraseñas no coinciden.');
+    setError(contraseñaCheck, 'Las contraseñas no coinciden.');
     hasError = true;
     }
 

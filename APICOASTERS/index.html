@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Coaster list</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+
+    <h1>Selecciona una coaster</h1>
+  <input type="text" id="searchInput" placeholder="Filtrar nombre" />
+  <input type="text" id="parkInput" placeholder="Filtrar parque" />
+  <select id="coasterSelect"></select>
+  <p>Coaster seleccionada: </p>
+  <div id="selectedCoaster">Ninguna</div>
+  <h2>Coasters guardadas</h2>
+  <label for="filterCountry">Filtrar por pais</label>
+  <select id="filterCountry"><option value="">Todos</option></select>
+  <label for="filterManufacturer">Filtrar por fabricante</label>
+  <select id="filterManufacturer"><option value="">Todos</option></select>
+  <label for="filterPark">Filtrar por parque</label>
+  <select id="filterPark"><option value="">Todos</option></select>
+  <div id="credits"></div>
+  <div id="guardadas"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

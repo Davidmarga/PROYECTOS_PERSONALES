@@ -37,18 +37,49 @@ export default function Tasks() {
   };
 
   return (
-    <div>
-      <button onClick={() => {localStorage.removeItem('token'); navigate('/login');}}>Cerrar sesión</button>
-      <h2>Tareas</h2>
-      <ul>{tasks.map(t => <li key={t.user.name}>{t.user.name} {t.title} {t.is_completed?'✅':'❌'}</li>)}</ul>
-      <form onSubmit={handleSubmit}>
-        <input name="title" placeholder="Título" required />
-        <input name="description" placeholder="Descripción" />
-        <input name="user_id" type="number" placeholder="User ID" required />
-        <input name="category_id" type="number" placeholder="Category ID" required />
-        <label><input name="completed" type="checkbox" /> Completada</label>
-        <button type="submit">Crear tarea</button>
-      </form>
+    <div className="container mt-4">
+  <div className="d-flex justify-content-between align-items-center mb-3">
+    <h2>Tareas</h2>
+    <button
+      className="btn btn-outline-danger"
+      onClick={() => {
+        localStorage.removeItem('token');
+        navigate('/login');
+      }}
+    >
+      Cerrar sesión
+    </button>
+  </div>
+
+  <ul className="list-group mb-4">
+    {tasks.map(t => (
+      <li key={t.id} className="list-group-item d-flex justify-content-between align-items-center">
+        <span><strong>{t.user.name}</strong>: {t.title}</span>
+        <span>{t.is_completed ? '✅' : '❌'}</span>
+      </li>
+    ))}
+  </ul>
+
+  <h4>Crear nueva tarea</h4>
+  <form onSubmit={handleSubmit}>
+    <div className="mb-3">
+      <input name="title" className="form-control" placeholder="Título" required />
     </div>
+    <div className="mb-3">
+      <input name="description" className="form-control" placeholder="Descripción" />
+    </div>
+    <div className="mb-3">
+      <input name="user_id" type="number" className="form-control" placeholder="User ID" required />
+    </div>
+    <div className="mb-3">
+      <input name="category_id" type="number" className="form-control" placeholder="Category ID" required />
+    </div>
+    <div className="form-check mb-3">
+      <input name="completed" type="checkbox" className="form-check-input" id="completedCheck" />
+      <label className="form-check-label" htmlFor="completedCheck">Completada</label>
+    </div>
+    <button type="submit" className="btn btn-primary">Crear tarea</button>
+  </form>
+</div>
   );
 }
